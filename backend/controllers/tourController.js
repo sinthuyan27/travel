@@ -48,3 +48,12 @@ export const getAllTour = async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 };
+
+export const getFeaturedTour = async (req, res) => {
+    try {
+        const tours = await Tour.find({ featured: true });
+        res.status(200).json(tours);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+}

@@ -42,7 +42,7 @@ app.use('/api/v1/users',userRout);
 app.use('/api/v1/auth',authRout);
 app.use('/api/v1/review',reviewRout);
 app.use('/api/v1/booking',bookingRout);
-app.use('/tours', tourRout);
+app.use('/api/v1/tours', tourRout);
 
 
 app.listen(port, ()=>{
